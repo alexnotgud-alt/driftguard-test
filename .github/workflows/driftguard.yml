@@ -1,0 +1,19 @@
+name: driftguard
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  analyze:
+    name: Drift Analysis
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+      contents: read
+
+    steps:
+      - name: Run driftguard
+        uses: alexnotgud-alt/driftguard@v1
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
