@@ -14,6 +14,6 @@ jobs:
 
     steps:
       - name: Run driftguard
-        uses: alexnotgud-alt/driftguard@v1
+        uses: alexnotgud-alt/driftguard@main
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
