@@ -16,4 +16,5 @@ jobs:
       - name: Run driftguard
         uses: alexnotgud-alt/driftguardz@main
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+      token: ${{ secrets.GITHUB_TOKEN }}
+      openai_api_key: ${{ secrets.OPENAI_API_KEY }}
